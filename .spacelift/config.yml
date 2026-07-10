@@ -1,0 +1,3 @@
+version: "2"
+
+runner_image: mdchavez87/spacelift-runner:latest
