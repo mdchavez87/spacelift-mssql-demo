@@ -1,6 +1,6 @@
 resource "null_resource" "deploy_sql" {
 
   provisioner "local-exec" {
-    command = "sqlcmd -S pod10-mardc-lt,1433 -U spacelift_dba -C -i deploy.sql"
+    command = "sqlcmd -S ${var.sql_server} -d ${var.sql_database} -U ${var.sql_user} -P ${var.sql_password} -C -i deploy.sql"
   }
 }
