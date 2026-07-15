@@ -1,0 +1,5 @@
+CREATE TABLE Customers
+(
+    Id INT PRIMARY KEY,
+    Name NVARCHAR(100)
+);
