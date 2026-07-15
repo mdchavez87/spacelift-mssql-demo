@@ -1,7 +1,8 @@
-resource "null_resource" "deploy_sql" {
+resource "null_resource" "database_migration" {
 
   triggers = {
-    sql_file = filemd5("database/migrations/001_create_customer.sql")
+    migration_file = "001_create_customer.sql"
+    sql_checksum   = filemd5("database/migrations/001_create_customer.sql")
   }
 
   provisioner "local-exec" {
